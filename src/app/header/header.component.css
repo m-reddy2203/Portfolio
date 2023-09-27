@@ -1,0 +1,16 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+.h6{
+   
+    font-weight: 300%;
+}
+.h3{
+    font-weight: 300%;
+}
+.loc{
+  max-width: 300px;
+}
+  .card {
+    max-width: 900px; /* You can adjust the value to your desired width */
+    margin: 0 auto; /* This centers the card horizontally */
+  }
+

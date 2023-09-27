@@ -1,0 +1,29 @@
+<div class="col-auto">
+    <div class="col-md-4 offset-md-3 float-right">
+      <h4>ACADEMIC PROJECTS</h4>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6 offset-md-2">
+        <div *ngFor="let project of project; let i=index">
+          <div class="d-flex align-items-center">
+            <div *ngIf="i === 0" class="col-md-4">
+              <img src="assets/fruit.png" class="img-fluid" style="max-width: 180px;">
+            </div>
+            <div *ngIf="i === 1" class="col-md-4">
+              <img src="assets/eye.png" class="img-fluid" style="max-width: 180px;">
+            </div>
+            <div class="col-md-8">
+              <h6><strong>Project Name: </strong>{{ project.name }}</h6>
+              <p><strong>Duration : </strong>{{ project.duration }}</p>
+              <p><strong>Technologies Used :</strong> {{ project.technologiesused }}</p>
+              <p><strong>Objective :</strong>{{ project.objective }}</p>
+              <p><strong>Description :</strong>{{ project.description }}</p>
+            </div>
+          </div>
+          <hr> <!-- Adding a horizontal line to separate each project -->
+        </div>
+      </div>
+    </div>
+
+  

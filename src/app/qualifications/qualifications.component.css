@@ -1,0 +1,39 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+/* Add custom CSS in your styles.css or component's CSS */
+.qualifications-container {
+    background-color: #f8f9fa;
+   
+    padding: 30px;
+  }
+  
+  /* Add a box shadow effect to create depth */
+  .qualifications-container {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  /* Add some spacing between the buttons and the qualification type */
+.btn-primary {
+    margin-right: 10px;
+  }
+  
+  /* Add a hover effect for buttons */
+  .btn-primary:hover, .btn-secondary:hover {
+    background-color: #007bff;
+  }
+  
+  .btn-secondary {
+    margin: 5px;
+  }
+  .card-body {
+    transition: all 0.3s ease;
+  }
+  
+  .card-body.ng-hide-add, .card-body.ng-hide-remove {
+    display: block !important;
+  }
+  
+  .card-body.ng-hide-add-active, .card-body.ng-hide-remove-active {
+    opacity: 0;
+    height: 0;
+    padding: 20%;
+  }
+    

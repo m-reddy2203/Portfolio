@@ -1,0 +1,62 @@
+<div class="container mt-3 bg-light p-18 qualifications-container">
+ <h4>QUALIFICATIONS</h4>
+</div>
+<div class="container mt-3">
+    <div class="card" *ngFor="let qualify of quali; let i=index">
+      <div class="card-header">
+        <button class="btn btn-primary" (click)="onhandle(i)">
+          <div *ngIf="i===0"><i class="fas fa-graduation-cap"></i></div>
+          <div *ngIf="i===1"><i class="fas fa-briefcase"></i></div>
+          {{ qualify.type }}
+        </button>
+      </div>
+      <div class="card-body" *ngIf="i === selectedIndex">
+        <div class="d-flex">
+          <div *ngFor="let det of qualify.Details; let j=index" class="mx-3" (click)="handlek(det, j)">
+            <button class="btn btn-secondary mx-2">{{ det.first }}</button> 
+  
+            <div *ngIf="j === in &&i===0" class="mt-3">
+              <div *ngIf="selectedDetails" class="bg-light p-3 d-flex align-items-center">
+                <div class="col-md-9">
+                  <p><strong>University:</strong> {{ selectedDetails.university }}</p>
+                  <p><strong>Start Date:</strong> {{ selectedDetails.startdate }}</p>
+                  <p><strong>End Date:</strong> {{ selectedDetails.enddate }}</p>
+                  <p><strong>CGPA:</strong> {{ selectedDetails.cgpa }}</p>
+                </div>
+                <div *ngIf="j===0" class="col-md-3">
+                  <img src="assets/download.png" class="img-fluid">
+                </div>
+                <div *ngIf="j===1" class="col-md-3">
+                    <img src="assets/snist.png" class="img-fluid">
+                  </div>
+              </div>
+            </div>
+            <div *ngIf="j === in && i===1" class="mt-3">
+                <div *ngIf="selectedDetails" class="bg-light p-3 d-flex align-items-center">
+                  <div class="col-md-9">
+                    <p><strong>Description:</strong> {{ selectedDetails.Description }}</p>
+                    <p><strong>Start Date:</strong> {{ selectedDetails.startDate }}</p>
+                    <p><strong>End Date:</strong> {{ selectedDetails.endDate }}</p>
+                    <p><strong>Technology used:</strong> {{ selectedDetails.Technologies }}</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div *ngIf="j === 0">
+                      <img src="assets/nur.png" class="img-fluid">
+                    </div>
+                    <div *ngIf="j === 1">
+                      <img src="assets/tcs.jpg" class="img-fluid">
+                    </div>
+                    <div *ngIf="j === 2">
+                      <img src="assets/download.png" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    
